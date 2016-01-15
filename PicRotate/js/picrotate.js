@@ -68,6 +68,8 @@ function turn() {
     var lis = document.getElementById("rotatePoint").getElementsByTagName("li");
     for (var i = 0; i < lis.length; i++) {
         //还没搞懂这个为什么会实现这个效果
+        //已解决：JS词法作用域 函数闭包
+        //链接：http://segmentfault.com/q/1010000004309819
         (function (x) {
             lis[x].onclick = function () {
                 setImg(x);
